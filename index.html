@@ -4,10 +4,68 @@
   <meta charset="UTF-8">
   <title>CoffeeRun</title>
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+<div class="container">
+  <header>
+    <h1>Кофе машина</h1>
+  </header>
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+      <form data-coffee-order="form" action="">
+      <div class="form-group">
+        <label for="coffeeOrder">Заказ кофе</label>
+        <input class="form-control" name="coffee" id="coffeeOrder" type="text" autofocus>
+      </div>
+      <div class="form-group">
+        <label for="emailInput">Email</label>
+        <input class="form-control" name="emailAddress" id="emailInput" type="email" placeholder="address@mail.com">
+      </div>
+      <div class="radio">
+        <label> 
+        <input type="radio" name="size" value="short">
+        Малая
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+        <input type="radio" name="size" value="tall" checked>
+        Большая
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+        <input type="radio" name="size" value="grande">
+        Огромная
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="flavorShot">Выбрать вкус</label>
+        <select name="flavor" id="flavorShot" class="form-control">
+          <option value="none">Без аромата</option>
+          <option value="caramel">Карамель</option>
+          <option value="almond">Миндаль</option>
+          <option value="mocha">Мокко</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="strengthLevel">Уровень кофеина</label>
+        <input class=" form-control" name="strength" id="strengthLevel" type="range">
+      </div>
+      <button type="submit" class="btn btn-default">Подтвердить</button>
+      <button type="reset" class="btn btn-default">Сброс</button>
+      </form>
+      </div>
+    </div>
+  </section>
+</div>
   <script src="js/datastore.js"></script>
   <script src="js/truck.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/formhandler.js"></script>
+  
 </body>
 </html>
